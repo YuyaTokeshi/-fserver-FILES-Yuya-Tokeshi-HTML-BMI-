@@ -19,6 +19,13 @@ $(function(){
 
     $(".calc-btn").click(
         function(){
+            var check = CheckChar();
+            if(check === false)
+            {
+                alert("半角数字を入力してください");
+                ResetForm();
+                return;
+            }
             $(".result-modal").fadeIn();
             var height = $(".height-input").val() / 100;
             var weight = $(".weight-input").val();
@@ -30,8 +37,7 @@ $(function(){
         function(){
             $(".calc-modal").fadeOut();
             $(".result-modal").fadeOut();
-            $(".height-input").val("");
-            $(".weight-input").val("");
+            ResetForm();
         }
     );
 
@@ -41,6 +47,18 @@ $(function(){
         }
     );
 });
+
+function CheckChar()
+{
+    if(!$(".height-input").val().match(/^([1-9][0-9]*|0)(\.[0-9]+)?$/))
+    {
+        return false;
+    }
+    if(!$(".weight-input").val().match(/^([1-9][0-9]*|0)(\.[0-9]+)?$/))
+    {
+        return false;
+    }
+};
 
 function CalcBmi(height, weight)
 {
@@ -57,4 +75,10 @@ function CalcBmi(height, weight)
         }
         $(".figure-box").text(figureList[figureList.length-1]);
     }
-}
+};
+
+function ResetForm()
+{
+    $(".height-input").val("");
+    $(".weight-input").val("");
+};

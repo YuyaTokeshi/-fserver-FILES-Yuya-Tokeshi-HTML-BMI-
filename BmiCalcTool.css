@@ -41,12 +41,16 @@ header
 
 .main-wrapper h1
 {
+    display: block;
+    margin-bottom: 40px;
     color: cornsilk;
 }
 
 .main-wrapper h2
 {
+    font-size: 20px;
     color: cornsilk;
+    line-height: 20px;
 }
 
 .btn
