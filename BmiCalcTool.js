@@ -29,7 +29,10 @@ $(function(){
             $(".result-modal").fadeIn();
             var height = $(".height-input").val() / 100;
             var weight = $(".weight-input").val();
-            CalcBmi(height, weight);
+            height = Math.round(height * 100)/100;
+            weight = Math.round(weight * 100)/100;
+            var i = CalcBmi(height, weight);
+            BmiComment(i, height, weight);
         }
     );
 
@@ -71,14 +74,38 @@ function CalcBmi(height, weight)
         if(resultBmi < bmiList[i])
         {
             $(".figure-box").text(figureList[i]);
-            return;
+            return i;
         }
-        $(".figure-box").text(figureList[figureList.length-1]);
     }
+    $(".figure-box").text(figureList[figureList.length-1]);
+    return figureList.length-1;
 };
+
+function BmiComment(i, height, weight)
+{
+    if(i === 0)
+    {
+        var overWeight = Math.round(bmiList[0] * height * height);
+        $(".comment").text("あと" + (overWeight - weight) + "kg太ったら" + figureList[i + 1]);
+    }
+    else if(i === figureList.length-1)
+    {
+        var underWeight = Math.round(bmiList[figureList.length-2] * height * height);
+        $(".comment").text("あと" + (weight - underWeight) + "kg痩せたら" + figureList[i - 1]);
+    }
+    else
+    {
+        var overWeight = Math.round(bmiList[i] * height * height);
+        var underWeight = Math.round(bmiList[i - 1] * height * height);
+        $(".comment").html("あと" + (overWeight - weight) + "kg太ったら" + figureList[i + 1] + "<br>" + 
+        "あと" + (weight - underWeight) + "kg痩せたら" + figureList[i - 1]);
+    }
+    return;
+}
 
 function ResetForm()
 {
     $(".height-input").val("");
     $(".weight-input").val("");
+    $(".comment").val("");
 };
