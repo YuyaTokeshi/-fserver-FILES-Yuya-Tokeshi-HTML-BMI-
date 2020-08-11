@@ -22,7 +22,6 @@ $(function(){
             $(".result-modal").fadeIn();
             var height = $(".height-input").val() / 100;
             var weight = $(".weight-input").val();
-            CheckChar(height, weight);
             CalcBmi(height, weight);
         }
     );
@@ -42,18 +41,6 @@ $(function(){
         }
     );
 });
-
-function CheckChar(height, weight)
-{
-    if(!(height.match(/^[0-9]+$/)))
-    {
-        window.alert('半角数字を入力してください');
-    }
-    if(!(weight.match(/^[0-9]+$/)))
-    {
-        window.alert('半角数字を入力してください');
-    }
-}
 
 function CalcBmi(height, weight)
 {
