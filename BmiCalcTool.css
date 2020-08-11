@@ -1,0 +1,147 @@
+body
+{
+    margin:0;
+    font-family: "Hiragino Kaku Gothic ProN";
+}
+
+.container
+{
+    width: 1350px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header
+{
+    background-color: rgba(34, 49, 52, 0.9);
+    color:cornsilk;
+    height: 85px;
+    position: fixed;
+    top:0;
+}
+
+.header-left
+{
+    float: left;
+    height: 40px;
+}
+
+.header-left h1
+{
+    padding-left: 10px;
+}
+
+.main-wrapper
+{
+    padding: 180px 0 100px 0;
+    background-image: url(TOPIMAGE.jpg);
+    background-size: cover;
+    height: 400px;
+}
+
+.main-wrapper h1
+{
+    color: cornsilk;
+}
+
+.main-wrapper h2
+{
+    color: cornsilk;
+}
+
+.btn
+{
+    font-weight: bold;
+    padding: 8px 24px;
+    background-color: #239b76;
+    opacity: 0.8;
+    border-radius: 4px;
+    box-shadow: 0 7px #1a7940;
+    cursor: pointer;
+    width: 145px;
+    margin: 0 auto;
+}
+
+.btn:active
+{
+    box-shadow: none;
+    position: relative;
+    top: 7px;
+}
+
+.start-btn
+{
+    display: block;
+    margin-top: 80px;
+}
+
+.calc-btn
+{
+    display: block;
+    margin-top: 40px;
+}
+
+.modal
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: none;
+}
+
+.calc-form
+{
+    position: absolute;
+    top: 20%;
+    left: 34%;
+    background-color: #e6ecf0;
+    padding: 20px 0 40px;
+    border-radius: 10px;
+    width: 450px;
+    height: auto;
+    text-align: center;
+}
+
+.calc-form input
+{
+    ime-mode: disabled;
+}
+
+.inp
+{
+    display: inline-block;
+    line-height: 15px;
+}
+
+.fa-times 
+{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: rgba(128, 128, 128, 0.46);
+    cursor: pointer;
+}
+
+.result-form
+{
+    position: absolute;
+    top: 20%;
+    left: 34%;
+    background-color: #e6ecf0;
+    padding: 20px 0 40px;
+    border-radius: 10px;
+    width: 450px;
+    height: auto;
+    text-align: center;
+    z-index: 110;
+}
+
+.back-btn
+{
+    display: block;
+    margin-top: 50px;
+}

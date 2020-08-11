@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>BmiCalcApp</title>
+        <link rel="stylesheet" href="BmiCalcTool.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="header-left">
+                    <h1>＞BMI計算アプリ</h1>
+                </div>
+            </div>
+        </header>
+        <div class="main-wrapper">
+            <div class="container">
+                <h1>BMI計算アプリ</h1>
+                <h2>身長と体重からBMIを計算するアプリです。</h2>
+                <h2>日々のダイエットに活用しましょう！</h2>
+                <a class="btn start-btn">さっそく計算する</a>
+            </div>
+        </div>
+        <div class="modal calc-modal">
+            <div class="calc-form">
+                <div class="close-modal">
+                    <i class="fa fa-2x fa-times"></i>
+                </div>
+                <h2>BMI計算</h2>
+                <form action="#">
+                    <p>身長と体重を入力してください。</p>
+                    <p></p>
+                    <p>身長</p>
+                    <input class="inp height-input" type="text" pattern="^[0-9]+$" title="半角英数字で入力して下さい。" placeholder="身長(cm)">
+                    <p>体重</p>
+                    <input class="inp weight-input" type="text" pattern="^[0-9]+$" title="半角英数字で入力して下さい。" placeholder="体重(kg)">
+                    <div class="btn calc-btn">計算する</div>
+                </form>
+            </div>
+        </div>
+        <div class="modal result-modal">
+            <div class="result-form">
+                <div class="close-modal">
+                    <i class="fa fa-2x fa-times"></i>
+                </div>
+                <h2>結果</h2>
+                <div class="result-box">
+                    <p>BMIは……<span class="bmi-box"></span></p>
+                    <p>体型は……<span class="figure-box"></span></p>
+                    <div class="btn back-btn">戻る</div>
+                </div>
+            </div>
+        </div>
+        <script src="BmiCalcTool.js"></script>
+    </body>
+</html>
