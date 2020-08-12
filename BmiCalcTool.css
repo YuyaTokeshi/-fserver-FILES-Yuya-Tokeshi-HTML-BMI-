@@ -140,7 +140,7 @@ header
 .result-form
 {
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 34%;
     background-color: #e6ecf0;
     padding: 20px 0 40px;
@@ -160,8 +160,20 @@ header
     height: 40%;
 }
 
+.bmi-box
+{
+    color: red;
+    font-weight: bold;
+}
+
+.figure-box
+{
+    color: red;
+    font-weight: bold;
+}
+
 .back-btn
 {
     display: block;
-    margin-top: 50px;
+    margin-top: 20px;
 }

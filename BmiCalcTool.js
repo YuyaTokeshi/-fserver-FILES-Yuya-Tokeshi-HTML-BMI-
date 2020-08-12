@@ -7,6 +7,7 @@ $(function(){
         }
     );
 
+    // フォーム内×ボタンを押した時の動作
     $(".close-modal").click(
         function(){
             $(".calc-modal").fadeOut();
@@ -15,6 +16,7 @@ $(function(){
         }
     );
 
+    // 「戻る」ボタンを押した時の動作
     $(".back-btn").click(
         function(){
             $(".result-modal").fadeOut();

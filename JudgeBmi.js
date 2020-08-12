@@ -9,14 +9,18 @@ $(function(){
         function(){
 
             // 半角数字が入力されているかを確認
-            CheckChar();
+            if(CheckChar() === false)
+            {
+                alert("半角数字を入力してください");
+                return;
+            }
 
             // 半角数字が正常に入力されていれば後続の処理
             $(".result-modal").fadeIn();
             var height = $(".height-input").val() / 100;
             var weight = $(".weight-input").val();
             
-            // BMIを計算
+            // BMIを計算、体型インデックスを取得
             var i = CalcBmi(height, weight);
 
             // 体重に関するコメント
@@ -28,24 +32,18 @@ $(function(){
 // 半角数字以外が入力されている場合にfalseを返す
 function CheckChar()
 {
-    var check = true;
     if(!$(".height-input").val().match(/^([1-9][0-9]*|0)(\.[0-9]+)?$/))
     {
-        check = false;
+        return false;
     }
     if(!$(".weight-input").val().match(/^([1-9][0-9]*|0)(\.[0-9]+)?$/))
     {
-        check = false;
+        return false;
     }
-    if(check === false)
-    {
-        alert("半角数字を入力してください");
-        ResetForm();
-        return;
-    }
+    return true;
 };
 
-// 身長と体重からBMIと体型を算出
+// 身長と体重からBMIと体型を算出、体型インデックスを返す
 function CalcBmi(height, weight)
 {
     var bmi = weight / (height * height);
