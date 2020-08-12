@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
+        <!-- CSS・JQuery・font-awesomeの連携 -->
         <meta charset="UTF-8">
         <title>BmiCalcApp</title>
         <link rel="stylesheet" href="BmiCalcTool.css">
@@ -8,6 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     </head>
     <body>
+        <!-- ヘッダー -->
         <header>
             <div class="container">
                 <div class="header-left">
@@ -15,6 +17,7 @@
                 </div>
             </div>
         </header>
+        <!-- メインラッパー -->
         <div class="main-wrapper">
             <div class="container">
                 <h1>BMI計算アプリ</h1>
@@ -23,6 +26,7 @@
                 <a class="btn start-btn">さっそく計算する</a>
             </div>
         </div>
+        <!-- 身長と体重を入力するモーダルウィンドウ -->
         <div class="modal calc-modal">
             <div class="calc-form">
                 <div class="close-modal">
@@ -40,6 +44,7 @@
                 </form>
             </div>
         </div>
+        <!-- BMI結果を表示するモーダルウィンドウ -->
         <div class="modal result-modal">
             <div class="result-form">
                 <div class="close-modal">
@@ -55,6 +60,7 @@
                 </div>
             </div>
         </div>
+        <!-- JavaScript連携 -->
         <script src="BmiCalcTool.js"></script>
     </body>
 </html>
