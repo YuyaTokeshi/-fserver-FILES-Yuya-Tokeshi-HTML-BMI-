@@ -34,7 +34,7 @@ header
 .main-wrapper
 {
     padding: 180px 0 100px 0;
-    background-image: url(TOPIMAGE.jpg);
+    background-image: url(../IMAGE/TOPIMAGE.jpg);
     background-size: cover;
     width: 1350px;
     height: 400px;
